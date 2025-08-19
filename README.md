@@ -100,3 +100,39 @@ a Regresión Logística obtuvo una accuracy de ~0.85 y un buen recall en la clas
 
 El Random Forest superó ligeramente con accuracy de ~0.87, mostrando mayor balance entre precisión y recall.
 
+# **Evaluación de modelos** #
+
+Realizar una evaluación para los diferentes modelos aplicados en el análisis ayuda a identificar que metricas importantes para el negocio se mueven a favor o en contra, de esta manera se puede preveenir o mejorar de alguna manera antes de que suceda la cancelación.
+
+
+_Regresión Logística_
+Predijo bien la mayoría de cancelaciones (recall = 0.98).
+Falló más en clientes que no cancelan, generando falsos positivos (predijo cancelación cuando no era).
+
+_Random Forest_
+Más equilibrado entre clases.
+No favorece en exceso a los clientes que cancelan o los que permanecen.
+
+
+Se realizo un análisis de comparación determinando que el modelo que presento mejor rendimiendo es el Random Forest (accuracy 0.87), teniendo una mejor interpretación de los datos y balance entre las descripciones de la base.
+
+# **Ejecusión de curva de ROC** #
+
+Ambos modelos tienen curvas muy por encima de la línea aleatoria, indicando alta capacidad de clasificación.
+Conclusión final:
+- La Regresión Logística es el modelo ganador en este caso:
+- Tiene mejor AUC (0.98).
+- Es más simple de implementar e interpretar.
+- Generaliza mejor en este dataset que Random Forest.
+
+# **Análisis de la Importancia de las Variables** #
+
+Después de elegir los modelos es importante que se realice el análisis de las variables más relevantes para la predicción de la cancelación.
+Se realizo una gráfica con las 15 variables mas significativas de la data, dato importante para determinar en que descripción enfocalizarse.
+
+
+# **Conclusión** #
+
+Se brinda una conclusión detallada analizando las varibles establecidas y modelos utilizados, de esta manera se concluye que el modelo que mejor predice es el Random Forest, sin descartar que el modelo de Regresión Logística, permite no solo predecir cancelaciones con un 87% de exactitud, si no también entender que tipo de factores las impulsan.
+
+Adicional se brinda una recomendación general de estrategías de permanecia que podrían ayudar a la empresa con la retención de clientes.
