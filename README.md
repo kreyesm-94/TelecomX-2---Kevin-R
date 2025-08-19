@@ -74,7 +74,29 @@ Variables especificas que se relacionan directamente con el;
 
 - Tiempo de contrato × Cancelación
 - Gasto total × Cancelación
+Adicional se agregaron dos opciones más;
 - Gasto mensual X Cancelación (Dato extra)
 - Contrato (tipo) X Cancelación (Dato extra)
 
+# *Separación de datos* #
+
+Se devide el conjunto de datos en entrenamiento y prueba para evaluar el rendimiento del modelo. Una división común es 70% para entrenamiento y 30% para prueba, o 80/20, dependiendo del tamaño de la base de datos.
+
+# *Creación de modelos* #
+Se crearon dos modelos;
+
+Modelo logístico: Se aplico la normalización
+
+Random forest: No se aplico normalización
+
+# **Justificación del preprocesamiento** #
+
+Para la Regresión Logística, aplicamos normalización porque es un modelo basado en optimización matemática (gradiente descendente). Si no escalamos, variables con rangos grandes podrían dominar el entrenamiento.
+
+Para Random Forest, no aplicamos normalización porque los árboles se basan en umbrales de partición (ej. “edad < 30”), lo que hace irrelevante la escala de la variable.
+
+Realizmos una comparación de resultados con los datos extraidos;
+a Regresión Logística obtuvo una accuracy de ~0.85 y un buen recall en la clase positiva (clientes que cancelan).
+
+El Random Forest superó ligeramente con accuracy de ~0.87, mostrando mayor balance entre precisión y recall.
 
